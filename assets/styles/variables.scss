@@ -1,0 +1,37 @@
+$bg-black: #2C2D31;
+$pink: #CD3D61;
+$light-grey: #EFEFEF;
+$dark-grey: #ADADAD;
+$medium-grey: darken(#EFEFEF, 10%);
+$bg-green: #4A856C;
+$dark-green: #416A5A;
+$bg-yellow: #FBCA20;
+
+
+
+@mixin headerCircle($imagePath) {
+margin-top: 4rem;
+ &:before {
+    content: '';
+    position: relative;
+    display: block;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 5rem;
+    top: -4rem;
+    left: calc( 50% - 3.5rem );
+
+    background: #2C2D31 url($imagePath);
+    background-size: 72% 72%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin shadow {
+  box-shadow:         0 8px 1px 0 rgba(0,0,0,0.18);
+  -moz-box-shadow:    0 8px 1px 0 rgba(0,0,0,0.18);
+  -webkit-box-shadow: 0 8px 1px 0 rgba(0,0,0,0.18);
+  -o-box-shadow:      0 8px 1px 0 rgba(0,0,0,0.18);
+  -ms-box-shadow:     0 8px 1px 0 rgba(0,0,0,0.18);
+}
