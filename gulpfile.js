@@ -4,6 +4,7 @@ var concat = require('gulp-concat');
 var less = require('gulp-less');
 var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('default', ['minify-sass','minify-scripts','images','copy-index', 'watch']);
 
