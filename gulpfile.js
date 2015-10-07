@@ -29,7 +29,13 @@ gulp.task('minify-sass', function() {
   return gulp.src('./assets/styles/style.scss') // use @import in style instead of concating all less files
   .pipe(sass())
   .pipe(minifyCSS())
-  .pipe(gulp.dest('./assets/styles')); // put in assets/styles
+  .pipe(concat('style.min.css'))
+   .pipe(autoprefixer({
+     browsers: ['last 2 versions'],
+     cascade: false
+   }))
+   .pipe(gulp.dest('./assets/styles'))
+   .pipe(gulp.dest('./dist/assets/styles'));
 });
 
 gulp.task('merge-css', function() {
